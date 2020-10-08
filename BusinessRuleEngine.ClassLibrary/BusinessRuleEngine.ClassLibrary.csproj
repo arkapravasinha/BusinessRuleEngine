@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{410A99A6-A098-4A69-8A66-BD5DB4966225}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessRuleEngine.ClassLibrary</RootNamespace>
+    <AssemblyName>BusinessRuleEngine.ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivateMembershipUtility.cs" />
+    <Compile Include="BookPaymentUtility.cs" />
+    <Compile Include="BookRule.cs" />
+    <Compile Include="BusinessRuleExecutor.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="IActivateMembershipUtility.cs" />
+    <Compile Include="IBookPaymentUtility.cs" />
+    <Compile Include="IBusinessRule.cs" />
+    <Compile Include="IBusinessRuleExecutor.cs" />
+    <Compile Include="IGenerateCommisionPayment.cs" />
+    <Compile Include="IGeneratePackagingSlip.cs" />
+    <Compile Include="IMembershipActivate.cs" />
+    <Compile Include="IMembershipUpgrade.cs" />
+    <Compile Include="IPhysicalProductPaymentUtility.cs" />
+    <Compile Include="ISendMessage.cs" />
+    <Compile Include="ISkiVideoPaymentUtility.cs" />
+    <Compile Include="IUpgradeMembershipUtility.cs" />
+    <Compile Include="MembershipRule.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PhysicalProductPaymentUtility.cs" />
+    <Compile Include="PhysicalProductRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkiVideoPaymentUtility.cs" />
+    <Compile Include="SkiVideoRule.cs" />
+    <Compile Include="UpgradeMembershipRule.cs" />
+    <Compile Include="UpgradeMembershipUtility.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
